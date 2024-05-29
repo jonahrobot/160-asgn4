@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body onload="main()">
+
+
+  <canvas id="webgl" width="600" height="400">
+    Please use a browser that supports "canvas"
+  </canvas>
+  
+  <input type="button" id="normalOn" value="Normal On">
+  <input type="button" id="normalOff" value="Normal Off">
+
+<p>
+  Light X <input type = "range" min="-250" max="250" value="0" class="slider" id="lightSlideX">
+  Light Y <input type = "range" min="-250" max="250" value="100" class="slider" id="lightSlideY">
+  Light Z <input type = "range" min="-250" max="250" value="-200" class="slider" id="lightSlideZ">
+  
+  Light R <input type = "range" min="0" max="255" value="15" class="slider" id="lightSliderR">
+  Light G <input type = "range" min="0" max="255" value="15" class="slider" id="lightSliderG">
+  Light B <input type = "range" min="0" max="255" value="15" class="slider" id="lightSliderB">
+</p>
+
+<h1> PRESS SPACE TO UNLOCK CAMERA!</h1>
+
+<input type="button" id="lightToggle" value="Toggle Lighting">
+
+  <div class="image-container-2">
+    
+    <p id="numdot"> XXX </p>
+
+  </div>
+
+  <style>
+
+
+   canvas{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }   
+  h2 {
+      margin-bottom: 1em;
+    }
+    .image-container {
+      position: absolute;
+      right: 10px; /* Position image 10px from the right edge */
+      bottom: 10px; /* Position image 10px from the bottom (optional) */
+    }
+
+    .image-container-2 {
+      position: absolute;
+      right: 100px; /* Position image 10px from the right edge */
+      bottom: 10px; /* Position image 10px from the bottom (optional) */
+    }
+
+    #enemy.img {
+      width: 50px; /* Adjust image size as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+    #webgl {
+      border: 1px solid black; /* Add a border for better visibility */
+    }
+  </style>
+
+  <script src="./lib/webgl-utils.js"></script>
+  <script src="./lib/cuon-matrix-cse160.js"></script>
+  <script src="./lib/webgl-debug.js"></script>
+  <script src="./lib/cuon-utils.js"></script>
+  <script src="./src/Camera.js"></script>
+  <script src="./src/Triangle.js"></script>
+  <script src="./src/Sphere.js"></script>
+  <script src="./src/Cube.js"></script>
+  <script src="./src/BlockyAnimal.js"></script>
+
+</body>
+
+</html>
